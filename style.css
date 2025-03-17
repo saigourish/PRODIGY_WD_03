@@ -1,0 +1,101 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('image.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+#home-page, #game-page {
+    text-align: center;
+    color: #fff;
+}
+
+#home-page {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background: #ffcc00;
+    transform: scale(1.1);
+}
+
+.cell.X {
+    color: #d32f2f;
+}
+
+.cell.O {
+    color: #1976d2;
+}
+
+button {
+    background: #ffcc00;
+    border: none;
+    color: black;
+    padding: 15px 30px;
+    font-size: 1.0em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #ff8800;
+    transform: scale(1.05);
+}
+
+button:active {
+    background: #ff5500;
+    transform: scale(0.95);
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: #ffcc00;
+    font-size: 1.2em;
+    font-weight: bold;
+}
